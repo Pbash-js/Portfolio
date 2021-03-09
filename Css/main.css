@@ -219,7 +219,8 @@ form textarea { font-family: "Proza Libre", sans-serif; justify-self: flex-end; 
   #skills-section .skill-container .skill-list .skill .lebel-empty { width: 98px; }
   #projects-section { color: white; }
   #projects-section .popup-container .popup-line { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: space-evenly; -ms-flex-pack: space-evenly; justify-content: space-evenly; margin-bottom: 20px; }
-  #projects-section .popup-container .popup-line .popup { height: 30px; width: 30px; border-radius: 15px; margin: 0; } }
+  #projects-section .popup-container .popup-line .popup { height: 30px; width: 30px; border-radius: 15px; margin: 0; }
+  #projects-section .popup-container .popup-line .popup:hover, #projects-section .popup-container .popup-line .popup:focus { height: 40px; width: 40x; border-radius: 20px; } }
 
 @media screen and (max-width: 1000px) and (max-width: 500px) { #contact-section { color: white; }
   #contact-section .social-container a { color: white; } }

@@ -152,6 +152,12 @@
           width: 30px;
           border-radius: 15px;
           margin: 0;
+          &:hover,
+          &:focus {
+            height: 40px;
+            width: 40x;
+            border-radius: 20px;
+          }
         }
       }
     }
