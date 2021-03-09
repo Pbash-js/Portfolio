@@ -5,15 +5,13 @@
 }
 
 .moon-container {
-  // position: absolute;
-
   transition-property: transform;
   transition-duration: 0.5s;
   transition-timing-function: ease-in-out;
   transition: transform 0.5s ease-in-out, background 0.2s ease-in;
   height: 400px;
   width: 400px;
-  background: url("../img/moon2.png");
+  background: url("https://pbash-js.github.io/Portfolio/img/moon2.png");
   background-size: cover;
   word-break: none;
   display: flex;
@@ -43,7 +41,7 @@
   left: 90%;
   .moon-container {
     transition: transform 0.5s, height 0.5s, width 0.5s, background 0.2s;
-    background: url("../img/rocket.png");
+    background: url("https://pbash-js.github.io/Portfolio/img/rocket.png");
     background-position-x: center;
     background-position-y: center;
     background-size: cover;
