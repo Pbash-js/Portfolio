@@ -1,0 +1,169 @@
+@media (max-width: 1000px) {
+  .nav-container {
+    nav {
+      position: fixed;
+      top: calc(100vh - 50px);
+      font-size: 13px;
+      .navlink {
+        padding: 0 10px;
+      }
+    }
+  }
+
+  .moon-container {
+    height: 200px;
+    width: 200px;
+    .title {
+      font-size: 20px;
+    }
+    .btn {
+      font-size: 1rem;
+      background-color: rgba($color: #000000, $alpha: 0);
+    }
+  }
+
+  .moon-button {
+    top: 85%;
+    left: 90%;
+    .moon-container {
+      height: 30px;
+      width: 30px;
+      &:hover {
+        .btn-popup {
+          width: 50px;
+          height: 50px;
+        }
+      }
+      .btn-popup {
+        border-radius: 20px;
+        i {
+          font-size: 20px;
+        }
+        &-expanded {
+          height: 120vh !important;
+          transform: translateY(3%);
+
+          .fas {
+            font-size: 15px;
+            display: inline-block !important;
+          }
+        }
+      }
+    }
+  }
+
+  .chat-button {
+    left: 50%;
+    top: 50%;
+    transform: translate(0px, 0px) !important;
+  }
+
+  section {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    padding: 50px 20px 50px;
+    overflow: hidden;
+
+    h1 {
+      font-size: 25px;
+    }
+
+    .section-text {
+      display: flex;
+    }
+  }
+
+  #about-section {
+    .popup-container-about {
+      .popup-line-about {
+        margin-bottom: 15px;
+        flex-direction: row;
+        .popup-about {
+          margin: 10px;
+
+          height: 20px;
+          width: 20px;
+        }
+        .popup-about:hover {
+          .small-text {
+            display: none;
+          }
+        }
+        .popup-expanded-about {
+          transform: translate(50%, 0%);
+          .heading {
+            font-size: 20px;
+          }
+          .heading-2 {
+            margin: 10px 0px 10px;
+            font-size: 15px;
+          }
+          .popup-text {
+            margin-top: 5px;
+            .item-time,
+            .item-location {
+              display: block;
+              font-size: 12px;
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  #skills-section {
+    display: flex;
+    flex-direction: column;
+    .skill-container {
+      justify-content: center;
+      .skill-list {
+        width: 120px;
+        .skill {
+          margin: 10px;
+          .lebel,
+          .lebel-empty {
+            margin-top: 5px;
+            height: 1rem;
+            width: 100px;
+          }
+          .lebel-empty {
+            width: 98px;
+          }
+        }
+      }
+    }
+  }
+  #projects-section {
+    color: white;
+    .popup-container {
+      .popup-line {
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 20px;
+        .popup {
+          height: 30px;
+          width: 30px;
+          border-radius: 15px;
+          margin: 0;
+        }
+      }
+    }
+  }
+  #contact-section {
+    @media screen and (max-width: 500px) {
+      color: white;
+      .social-container {
+        a {
+          color: white;
+        }
+      }
+    }
+    .section-text {
+      display: block;
+    }
+    .social-container {
+      display: flex;
+    }
+  }
+}

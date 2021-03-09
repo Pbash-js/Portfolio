@@ -1,0 +1,110 @@
+.moon-move {
+  transition: top 1s, left 0.5s, scale 3s;
+  top: 50%;
+  left: 50%;
+}
+
+.moon-container {
+  // position: absolute;
+
+  transition-property: transform;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+  transition: transform 0.5s ease-in-out, background 0.2s ease-in;
+  height: 400px;
+  width: 400px;
+  background: url("../img/Moon2.png");
+  background-size: cover;
+  word-break: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 2s;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 123;
+  h2 {
+    color: rgb(255, 255, 255);
+  }
+  .btn {
+    top: 65%;
+    color: rgb(255, 255, 255);
+  }
+
+  .title {
+    font-size: 36px;
+    color: #ffffff;
+  }
+}
+
+.moon-button {
+  position: absolute;
+  top: 90%;
+  left: 90%;
+  .moon-container {
+    transition: transform 0.5s, height 0.5s, width 0.5s, background 0.2s;
+    background: url("/img/pnghost_rocket-launch-spacecraft-rocket.png");
+    background-position-x: center;
+    background-position-y: center;
+    background-size: cover;
+    height: 60px;
+    width: 60px;
+
+    &:hover {
+      .btn-popup {
+        height: 100px;
+        width: 70px;
+      }
+    }
+
+    .title,
+    h2,
+    .btn {
+      display: none;
+    }
+  }
+}
+
+.chat-button {
+  left: 50%;
+  top: 80%;
+  transform: translate(0px, 0px) !important;
+}
+
+.btn-popup {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 0vh;
+  width: 0vh;
+  transition: all 0.5s;
+  background-color: white;
+  overflow: hidden;
+  padding-top: 5px;
+
+  .fa-envelope {
+    font-size: 50px;
+  }
+
+  &-expanded {
+    transform: translateY(-30%);
+    transition: all 0.5s;
+    padding: 20px;
+    height: 90vh !important;
+    width: 95vw !important;
+    .btn-popup-interaction {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      .fas {
+        display: inline-block !important;
+      }
+    }
+  }
+
+  & > &-interaction {
+    .fas {
+      display: none;
+    }
+  }
+}

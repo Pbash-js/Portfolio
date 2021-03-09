@@ -1,0 +1,38 @@
+.nav-container {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+
+  nav {
+    z-index: 1000;
+    width: 100%;
+    margin-left: auto;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+    opacity: 0;
+    filter: blur(3);
+
+    .navlink {
+      padding: 0 20px;
+      z-index: 02;
+    }
+
+    .lava {
+      z-index: 1001;
+      height: 1.5em;
+      width: 80px;
+      border-radius: 5px;
+      background-color: rgba($color: #3a38aa, $alpha: 1);
+      mix-blend-mode: normal;
+      z-index: 01;
+      position: absolute;
+      transition-duration: 0.8s;
+    }
+  }
+}

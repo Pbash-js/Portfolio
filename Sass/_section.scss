@@ -1,0 +1,270 @@
+.float {
+  position: fixed !important;
+
+  z-index: 12398;
+}
+
+.parallax {
+  position: absolute;
+  object-fit: cover;
+}
+
+.screen {
+  scroll-snap-align: end;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  background: url("../img/Portfolio3.png");
+  background-attachment: fixed;
+  background-size: cover;
+  z-index: 2;
+}
+.section-container {
+  z-index: 3;
+  top: 100vh;
+  width: 100%;
+  transition: top ease-in-out 0.5s;
+}
+
+#about-section {
+  position: relative;
+  background: url("../img/Portfolio3.png");
+  background-attachment: fixed;
+  background-position-x: center;
+  background-position-y: 35%;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  .popup-container-about {
+    width: 100%;
+    margin-top: auto;
+
+    .popup-line-about {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+    .popup-about {
+      padding: 20px;
+      margin: 20px;
+      height: 50px;
+      width: 50px;
+      border-radius: 25px;
+      transition: height 0.3s, width 0.1s, border-radius 0.5s;
+      background-color: white;
+      color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      i {
+        pointer-events: none;
+      }
+      .small-text {
+        pointer-events: none;
+        transition: font-size 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+        font-size: 0;
+      }
+      &:hover,
+      &:focus {
+        height: 60px;
+        width: 160px;
+        border-radius: 30px;
+      }
+    }
+
+    .popup-about:hover {
+      .small-text {
+        margin-left: 5px;
+
+        font-size: 1rem;
+      }
+    }
+
+    .popup-expanded-about {
+      padding: 0px;
+      position: absolute;
+      top: 0%;
+      right: 0%;
+      height: 0px;
+      width: 0px;
+      transition: all 0.5s;
+      transform: translate(0%, -50%);
+      align-self: flex-end;
+      justify-self: center;
+      border-radius: 25px;
+      background-color: rgb(255, 255, 255);
+      color: black;
+      overflow: scroll;
+      img {
+        display: block;
+        margin: 10px auto 0;
+        max-width: 50%;
+        max-height: 500px;
+        width: auto;
+        height: auto;
+        border-radius: 10px;
+      }
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      .heading {
+        font-size: 1.5rem;
+        font-weight: bolder;
+      }
+      .heading-2 {
+        margin: 30px 0px 10px;
+        font-size: 1.3rem;
+        color: rgb(0, 0, 0) !important;
+        a {
+          font-size: 0.8rem;
+          color: rgb(143, 143, 143);
+        }
+        .fas {
+          margin-left: 10px;
+          &:hover {
+            color: blueviolet;
+          }
+        }
+      }
+      .popup-text {
+        color: rgb(143, 143, 143);
+
+        margin-top: 10px;
+
+        .item {
+          &-time {
+            font-size: 1rem;
+            display: inline;
+          }
+          &-location {
+            font-size: 1.2rem;
+            margin-left: 20px;
+            display: inline;
+          }
+        }
+      }
+      .fa-times {
+        display: block;
+        position: absolute;
+        right: 20px;
+      }
+    }
+    ::-webkit-scrollbar {
+      width: 10px;
+
+      &-track {
+        background-color: rgba(255, 255, 255, 0.103);
+        border-radius: 5px;
+      }
+
+      &-thumb {
+        background-color: rgb(212, 53, 53);
+        border-radius: 5px;
+        height: 20px;
+      }
+    }
+  }
+}
+#skills-section {
+  background: url("../img/Portfolio3.png");
+  background-attachment: fixed;
+  background-position-x: left;
+  background-position-y: 45%;
+  background-size: cover;
+
+  .skill-container {
+    display: flex;
+    justify-content: flex-start;
+    .skill-list {
+      width: 40vw;
+      .skill {
+        margin: 20px 50px 0;
+        .lebel {
+          margin-top: 10px;
+          height: 2rem;
+          width: 00px; //animate this
+          background-image: url("../img/Stars.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+          transition: width 0.5s;
+        }
+        .lebel-empty {
+          z-index: -123;
+          position: absolute;
+          margin-top: 10px;
+          height: 2rem;
+          width: 198px;
+          background-image: url("../img/StarsEmpty.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      }
+    }
+  }
+}
+
+#projects-section {
+  background: url("../img/Portfolio3.png");
+  background-attachment: fixed;
+  background-position-x: center;
+  background-position-y: 78%;
+  background-size: cover;
+  color: black;
+  display: flex;
+  flex-direction: column;
+}
+
+#contact-section {
+  background: url("../img/Portfolio3.png");
+  background-attachment: fixed;
+  background-position-x: center;
+  background-position-y: bottom;
+  background-size: cover;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  backdrop-filter: invert(1);
+  .social-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    a {
+      color: black;
+      &:focus,
+      &:hover {
+        outline: 0px;
+        .fab {
+          color: white;
+          transform: scale(1.2);
+        }
+      }
+    }
+    .fab {
+      font-size: 1.5rem;
+      transition: all 0.2s;
+    }
+  }
+}
+
+section {
+  font-size: 1.2rem;
+  scroll-snap-align: start;
+  width: 100%;
+  min-height: 100vh;
+  border: 2px solid white;
+  background: linear-gradient(#123, rgb(145, 145, 145));
+  backdrop-filter: blur(3px);
+  color: white;
+  border-radius: 10px;
+  padding: 100px 100px 20px 100px;
+
+  h1 {
+    font-size: 50px;
+  }
+}

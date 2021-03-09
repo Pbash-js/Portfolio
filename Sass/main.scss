@@ -1,0 +1,46 @@
+@import "moon";
+@import "nav";
+@import "section";
+@import "btn";
+@import "form";
+@import "projects";
+
+@import url("https://fonts.googleapis.com/css2?family=Proza+Libre&display=swap");
+
+$imgwidth: 4;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  &:focus {
+    outline: 0px;
+  }
+  body {
+    font-family: "Proza Libre", sans-serif;
+    user-select: none;
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+
+  &-track {
+    background-color: rgba(255, 255, 255, 0.103);
+    border-radius: 5px;
+  }
+
+  &-thumb {
+    background-color: rgb(212, 53, 53);
+    border-radius: 5px;
+    height: 20px;
+  }
+}
+
+@import "mobile";
