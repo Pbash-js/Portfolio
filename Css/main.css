@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Proza+Libre&display=swap");
 .moon-move { -webkit-transition: top 1s, left 0.5s, scale 3s; transition: top 1s, left 0.5s, scale 3s; top: 50%; left: 50%; }
 
-.moon-container { -webkit-transition-property: -webkit-transform; transition-property: -webkit-transform; transition-property: transform; transition-property: transform, -webkit-transform; -webkit-transition-duration: 0.5s; transition-duration: 0.5s; -webkit-transition-timing-function: ease-in-out; transition-timing-function: ease-in-out; -webkit-transition: background 0.2s ease-in, -webkit-transform 0.5s ease-in-out; transition: background 0.2s ease-in, -webkit-transform 0.5s ease-in-out; transition: transform 0.5s ease-in-out, background 0.2s ease-in; transition: transform 0.5s ease-in-out, background 0.2s ease-in, -webkit-transform 0.5s ease-in-out; height: 400px; width: 400px; background: url("../img/Moon2.png"); background-size: cover; word-break: none; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-transition: -webkit-transform 2s; transition: -webkit-transform 2s; transition: transform 2s; transition: transform 2s, -webkit-transform 2s; -webkit-transform: translateX(-50%) translateY(-50%); transform: translateX(-50%) translateY(-50%); z-index: 123; }
+.moon-container { -webkit-transition-property: -webkit-transform; transition-property: -webkit-transform; transition-property: transform; transition-property: transform, -webkit-transform; -webkit-transition-duration: 0.5s; transition-duration: 0.5s; -webkit-transition-timing-function: ease-in-out; transition-timing-function: ease-in-out; -webkit-transition: background 0.2s ease-in, -webkit-transform 0.5s ease-in-out; transition: background 0.2s ease-in, -webkit-transform 0.5s ease-in-out; transition: transform 0.5s ease-in-out, background 0.2s ease-in; transition: transform 0.5s ease-in-out, background 0.2s ease-in, -webkit-transform 0.5s ease-in-out; height: 400px; width: 400px; background: url("../img/moon2.png"); background-size: cover; word-break: none; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-transition: -webkit-transform 2s; transition: -webkit-transform 2s; transition: transform 2s; transition: transform 2s, -webkit-transform 2s; -webkit-transform: translateX(-50%) translateY(-50%); transform: translateX(-50%) translateY(-50%); z-index: 123; }
 
 .moon-container h2 { color: white; }
 
@@ -11,7 +11,7 @@
 
 .moon-button { position: absolute; top: 90%; left: 90%; }
 
-.moon-button .moon-container { -webkit-transition: height 0.5s, width 0.5s, background 0.2s, -webkit-transform 0.5s; transition: height 0.5s, width 0.5s, background 0.2s, -webkit-transform 0.5s; transition: transform 0.5s, height 0.5s, width 0.5s, background 0.2s; transition: transform 0.5s, height 0.5s, width 0.5s, background 0.2s, -webkit-transform 0.5s; background: url("/img/pnghost_rocket-launch-spacecraft-rocket.png"); background-position-x: center; background-position-y: center; background-size: cover; height: 60px; width: 60px; }
+.moon-button .moon-container { -webkit-transition: height 0.5s, width 0.5s, background 0.2s, -webkit-transform 0.5s; transition: height 0.5s, width 0.5s, background 0.2s, -webkit-transform 0.5s; transition: transform 0.5s, height 0.5s, width 0.5s, background 0.2s; transition: transform 0.5s, height 0.5s, width 0.5s, background 0.2s, -webkit-transform 0.5s; background: url("../img/rocket.png"); background-position-x: center; background-position-y: center; background-size: cover; height: 60px; width: 60px; }
 
 .moon-button .moon-container:hover .btn-popup { height: 100px; width: 70px; }
 
@@ -43,11 +43,11 @@
 
 .parallax { position: absolute; -o-object-fit: cover; object-fit: cover; }
 
-.screen { scroll-snap-align: end; overflow: hidden; height: 100vh; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; width: 100%; -webkit-box-align: center; -ms-flex-align: center; align-items: center; background: url("../img/Portfolio3.png"); background-attachment: fixed; background-size: cover; z-index: 2; }
+.screen { scroll-snap-align: end; overflow: hidden; height: 100vh; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; width: 100%; -webkit-box-align: center; -ms-flex-align: center; align-items: center; background: url("../img/portfolio3.png"); background-attachment: fixed; background-size: cover; z-index: 2; }
 
 .section-container { z-index: 3; top: 100vh; width: 100%; -webkit-transition: top ease-in-out 0.5s; transition: top ease-in-out 0.5s; }
 
-#about-section { position: relative; background: url("../img/Portfolio3.png"); background-attachment: fixed; background-position-x: center; background-position-y: 35%; background-size: cover; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
+#about-section { position: relative; background: url("../img/portfolio3.png"); background-attachment: fixed; background-position-x: center; background-position-y: 35%; background-size: cover; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
 
 #about-section .popup-container-about { width: 100%; margin-top: auto; }
 
@@ -93,7 +93,7 @@
 
 #about-section .popup-container-about ::-webkit-scrollbar-thumb { background-color: #d43535; border-radius: 5px; height: 20px; }
 
-#skills-section { background: url("../img/Portfolio3.png"); background-attachment: fixed; background-position-x: left; background-position-y: 45%; background-size: cover; }
+#skills-section { background: url("../img/portfolio3.png"); background-attachment: fixed; background-position-x: left; background-position-y: 45%; background-size: cover; }
 
 #skills-section .skill-container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; }
 
@@ -101,13 +101,13 @@
 
 #skills-section .skill-container .skill-list .skill { margin: 20px 50px 0; }
 
-#skills-section .skill-container .skill-list .skill .lebel { margin-top: 10px; height: 2rem; width: 00px; background-image: url("../img/Stars.png"); background-repeat: no-repeat; background-size: cover; -webkit-transition: width 0.5s; transition: width 0.5s; }
+#skills-section .skill-container .skill-list .skill .lebel { margin-top: 10px; height: 2rem; width: 00px; background-image: url("../img/stars.png"); background-repeat: no-repeat; background-size: cover; -webkit-transition: width 0.5s; transition: width 0.5s; }
 
-#skills-section .skill-container .skill-list .skill .lebel-empty { z-index: -123; position: absolute; margin-top: 10px; height: 2rem; width: 198px; background-image: url("../img/StarsEmpty.png"); background-repeat: no-repeat; background-size: cover; }
+#skills-section .skill-container .skill-list .skill .lebel-empty { z-index: -123; position: absolute; margin-top: 10px; height: 2rem; width: 198px; background-image: url("../img/starsempty.png"); background-repeat: no-repeat; background-size: cover; }
 
-#projects-section { background: url("../img/Portfolio3.png"); background-attachment: fixed; background-position-x: center; background-position-y: 78%; background-size: cover; color: black; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
+#projects-section { background: url("../img/portfolio3.png"); background-attachment: fixed; background-position-x: center; background-position-y: 78%; background-size: cover; color: black; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
 
-#contact-section { background: url("../img/Portfolio3.png"); background-attachment: fixed; background-position-x: center; background-position-y: bottom; background-size: cover; color: black; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-backdrop-filter: invert(1); backdrop-filter: invert(1); }
+#contact-section { background: url("../img/portfolio3.png"); background-attachment: fixed; background-position-x: center; background-position-y: bottom; background-size: cover; color: black; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-backdrop-filter: invert(1); backdrop-filter: invert(1); }
 
 #contact-section .social-container { margin-top: 20px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: space-evenly; -ms-flex-pack: space-evenly; justify-content: space-evenly; }
 
