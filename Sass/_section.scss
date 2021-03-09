@@ -9,7 +9,26 @@
   object-fit: cover;
 }
 
+section {
+  font-size: 1.2rem;
+  scroll-snap-align: start;
+  width: 100%;
+  min-height: 100vh;
+  border: 2px solid white;
+  background: url("https://pbash-js.github.io/Portfolio/img/portfolio3.png");
+
+  backdrop-filter: blur(3px);
+  color: white;
+  border-radius: 10px;
+  padding: 100px 100px 20px 100px;
+
+  h1 {
+    font-size: 50px;
+  }
+}
+
 .screen {
+  background: url("https://pbash-js.github.io/Portfolio/img/portfolio3.png");
   scroll-snap-align: end;
   overflow: hidden;
   height: 100vh;
@@ -17,7 +36,6 @@
   justify-content: center;
   width: 100%;
   align-items: center;
-  background: url("https://pbash-js.github.io/Portfolio/img/portfolio3.png");
   background-attachment: fixed;
   background-size: cover;
   z-index: 2;
@@ -31,7 +49,6 @@
 
 #about-section {
   position: relative;
-  background: url("https://pbash-js.github.io/Portfolio/img/portfolio3.png");
   background-attachment: fixed;
   background-position-x: center;
   background-position-y: 35%;
@@ -171,7 +188,6 @@
   }
 }
 #skills-section {
-  background: url("https://pbash-js.github.io/Portfolio/img/portfolio3.png");
   background-attachment: fixed;
   background-position-x: left;
   background-position-y: 45%;
@@ -209,7 +225,6 @@
 }
 
 #projects-section {
-  background: url("https://pbash-js.github.io/Portfolio/img/portfolio3.png");
   background-attachment: fixed;
   background-position-x: center;
   background-position-y: 78%;
@@ -220,7 +235,6 @@
 }
 
 #contact-section {
-  background: url("https://pbash-js.github.io/Portfolio/img/portfolio3.png");
   background-attachment: fixed;
   background-position-x: center;
   background-position-y: bottom;
@@ -249,22 +263,5 @@
       font-size: 1.5rem;
       transition: all 0.2s;
     }
-  }
-}
-
-section {
-  font-size: 1.2rem;
-  scroll-snap-align: start;
-  width: 100%;
-  min-height: 100vh;
-  border: 2px solid white;
-  background: linear-gradient(#123, rgb(145, 145, 145));
-  backdrop-filter: blur(3px);
-  color: white;
-  border-radius: 10px;
-  padding: 100px 100px 20px 100px;
-
-  h1 {
-    font-size: 50px;
   }
 }

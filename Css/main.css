@@ -43,11 +43,15 @@
 
 .parallax { position: absolute; -o-object-fit: cover; object-fit: cover; }
 
-.screen { scroll-snap-align: end; overflow: hidden; height: 100vh; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; width: 100%; -webkit-box-align: center; -ms-flex-align: center; align-items: center; background: url("https://pbash-js.github.io/Portfolio/img/portfolio3.png"); background-attachment: fixed; background-size: cover; z-index: 2; }
+section { font-size: 1.2rem; scroll-snap-align: start; width: 100%; min-height: 100vh; border: 2px solid white; background: url("https://pbash-js.github.io/Portfolio/img/portfolio3.png"); -webkit-backdrop-filter: blur(3px); backdrop-filter: blur(3px); color: white; border-radius: 10px; padding: 100px 100px 20px 100px; }
+
+section h1 { font-size: 50px; }
+
+.screen { background: url("https://pbash-js.github.io/Portfolio/img/portfolio3.png"); scroll-snap-align: end; overflow: hidden; height: 100vh; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; width: 100%; -webkit-box-align: center; -ms-flex-align: center; align-items: center; background-attachment: fixed; background-size: cover; z-index: 2; }
 
 .section-container { z-index: 3; top: 100vh; width: 100%; -webkit-transition: top ease-in-out 0.5s; transition: top ease-in-out 0.5s; }
 
-#about-section { position: relative; background: url("https://pbash-js.github.io/Portfolio/img/portfolio3.png"); background-attachment: fixed; background-position-x: center; background-position-y: 35%; background-size: cover; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
+#about-section { position: relative; background-attachment: fixed; background-position-x: center; background-position-y: 35%; background-size: cover; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
 
 #about-section .popup-container-about { width: 100%; margin-top: auto; }
 
@@ -93,7 +97,7 @@
 
 #about-section .popup-container-about ::-webkit-scrollbar-thumb { background-color: #d43535; border-radius: 5px; height: 20px; }
 
-#skills-section { background: url("https://pbash-js.github.io/Portfolio/img/portfolio3.png"); background-attachment: fixed; background-position-x: left; background-position-y: 45%; background-size: cover; }
+#skills-section { background-attachment: fixed; background-position-x: left; background-position-y: 45%; background-size: cover; }
 
 #skills-section .skill-container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; }
 
@@ -105,9 +109,9 @@
 
 #skills-section .skill-container .skill-list .skill .lebel-empty { z-index: -123; position: absolute; margin-top: 10px; height: 2rem; width: 198px; background-image: url("https://pbash-js.github.io/Portfolio/img/starsempty.png"); background-repeat: no-repeat; background-size: cover; }
 
-#projects-section { background: url("https://pbash-js.github.io/Portfolio/img/portfolio3.png"); background-attachment: fixed; background-position-x: center; background-position-y: 78%; background-size: cover; color: black; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
+#projects-section { background-attachment: fixed; background-position-x: center; background-position-y: 78%; background-size: cover; color: black; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
 
-#contact-section { background: url("https://pbash-js.github.io/Portfolio/img/portfolio3.png"); background-attachment: fixed; background-position-x: center; background-position-y: bottom; background-size: cover; color: black; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-backdrop-filter: invert(1); backdrop-filter: invert(1); }
+#contact-section { background-attachment: fixed; background-position-x: center; background-position-y: bottom; background-size: cover; color: black; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-backdrop-filter: invert(1); backdrop-filter: invert(1); }
 
 #contact-section .social-container { margin-top: 20px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: space-evenly; -ms-flex-pack: space-evenly; justify-content: space-evenly; }
 
@@ -118,10 +122,6 @@
 #contact-section .social-container a:focus .fab, #contact-section .social-container a:hover .fab { color: white; -webkit-transform: scale(1.2); transform: scale(1.2); }
 
 #contact-section .social-container .fab { font-size: 1.5rem; -webkit-transition: all 0.2s; transition: all 0.2s; }
-
-section { font-size: 1.2rem; scroll-snap-align: start; width: 100%; min-height: 100vh; border: 2px solid white; background: -webkit-gradient(linear, left top, left bottom, from(#123), to(#919191)); background: linear-gradient(#123, #919191); -webkit-backdrop-filter: blur(3px); backdrop-filter: blur(3px); color: white; border-radius: 10px; padding: 100px 100px 20px 100px; }
-
-section h1 { font-size: 50px; }
 
 .btn { position: absolute; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; top: 80%; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); background-color: black; font-size: 30px; border-radius: 5px; width: -webkit-fit-content; width: -moz-fit-content; width: fit-content; height: -webkit-fit-content; height: -moz-fit-content; height: fit-content; padding: 5px 20px; }
 
@@ -171,9 +171,13 @@ form textarea { font-family: "Proza Libre", sans-serif; justify-self: flex-end; 
 
 *:focus { outline: 0px; }
 
-* body { font-family: "Proza Libre", sans-serif; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+* body { font-family: "Proza Libre", sans-serif; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; overflow: hidden; }
 
 * body a { text-decoration: none; }
+
+.loading-screen { scroll-snap-align: center; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; height: 100vh; width: 100vw; background-color: black; position: absolute; z-index: 20312; -webkit-transition: opacity 0.4s; transition: opacity 0.4s; opacity: 1; font-size: 300px; color: white; }
+
+.loading-screen h2 { font-size: 30px; }
 
 ::-webkit-scrollbar { width: 0px; }
 

@@ -1,3 +1,15 @@
+document.onreadystatechange = () => {
+  if (document.readyState == "complete") {
+    document.body.style.overflow = "auto";
+    var loading = document.querySelector(".loading-screen");
+    loading.style.opacity = "0";
+    setTimeout(() => {
+      loading.remove();
+    }, 500);
+    return console.log("complete");
+  }
+};
+
 document.documentElement.addEventListener("mousemove", parallax);
 function parallax(e) {
   this.querySelectorAll(".parallax").forEach((para) => {
