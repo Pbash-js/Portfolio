@@ -185,7 +185,9 @@ form textarea { font-family: "Proza Libre", sans-serif; justify-self: flex-end; 
 
 ::-webkit-scrollbar-thumb { background-color: #d43535; border-radius: 5px; height: 20px; }
 
-@media (max-width: 1000px) { .nav-container nav { position: fixed; top: calc(100vh - 50px); font-size: 13px; }
+@media (max-width: 1000px) { .loading-screen { font-size: 100px; }
+  .loading-screen h2 { font-size: 30px; }
+  .nav-container nav { position: fixed; top: calc(100vh - 50px); font-size: 13px; }
   .nav-container nav .navlink { padding: 0 10px; }
   .moon-container { height: 200px; width: 200px; }
   .moon-container .title { font-size: 20px; }

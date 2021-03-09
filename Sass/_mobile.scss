@@ -1,4 +1,10 @@
 @media (max-width: 1000px) {
+  .loading-screen {
+    font-size: 100px;
+    h2 {
+      font-size: 30px;
+    }
+  }
   .nav-container {
     nav {
       position: fixed;
