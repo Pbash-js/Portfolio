@@ -1,4 +1,7 @@
 @media (max-width: 1000px) {
+  * {
+    scroll-snap-type: none;
+  }
   .loading-screen {
     font-size: 100px;
     h2 {
