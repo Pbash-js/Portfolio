@@ -34,26 +34,27 @@
   }
 
   .moon-button {
-    top: 85%;
+    top: 80%;
     left: 90%;
     .moon-container {
       height: 30px;
       width: 30px;
-      &:hover {
-        .btn-popup {
-          width: 50px;
-          height: 50px;
-        }
-      }
       .btn-popup {
         border-radius: 20px;
         i {
-          font-size: 20px;
+          padding-left: 13%;
+          font-size: 30px;
+          .fas {
+            display: none !important;
+          }
         }
         &-expanded {
+          padding: 20px;
           height: 120vh !important;
           transform: translateY(3%);
-
+          i {
+            padding-left: 0%;
+          }
           .fas {
             font-size: 15px;
             display: inline-block !important;
@@ -77,7 +78,7 @@
     overflow: hidden;
 
     h1 {
-      font-size: 25px;
+      font-size: 2rem;
     }
 
     .section-text {
@@ -88,11 +89,9 @@
   #about-section {
     .popup-container-about {
       .popup-line-about {
-        margin-bottom: 15px;
         flex-direction: row;
         .popup-about {
           margin: 10px;
-
           height: 20px;
           width: 20px;
         }
@@ -151,7 +150,7 @@
       .popup-line {
         display: flex;
         justify-content: space-evenly;
-        margin-bottom: 20px;
+        margin-bottom: 1em;
         .popup {
           height: 30px;
           width: 30px;
@@ -162,6 +161,9 @@
             height: 40px;
             width: 40x;
             border-radius: 20px;
+          }
+          .fa-link {
+            right: 80px !important;
           }
         }
       }
@@ -180,6 +182,7 @@
       display: block;
     }
     .social-container {
+      min-width: 50vw;
       display: flex;
     }
   }

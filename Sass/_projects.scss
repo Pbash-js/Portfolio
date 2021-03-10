@@ -43,6 +43,13 @@
     background-size: contain;
     background-repeat: no-repeat;
     overflow: hidden;
+    &:hover {
+      .fa-link {
+        bottom: 80%;
+        background-color: transparent !important;
+        color: blueviolet;
+      }
+    }
     & i {
       position: absolute;
       bottom: 20px;
@@ -57,7 +64,9 @@
       align-items: center;
       z-index: 23;
       color: black;
+      transition: right 0.5s;
     }
+
     .popup-info {
       position: absolute;
       display: flex;
@@ -68,17 +77,16 @@
       width: 100%;
       color: white;
       border-radius: 25px;
-
       background-color: white;
-      transition: height 0.5s, opacity 0.01s;
+      transition: height 0.5s ease-out, opacity 0.01s;
       overflow: hidden;
       text-align: center;
     }
 
-    i:hover + .popup-info {
+    i:hover + .popup-info,
+    i:focus-within + .popup-info {
       padding: 40px;
       border: 2px solid grey;
-
       color: rgba(0, 0, 0, 1);
       height: 100%;
     }

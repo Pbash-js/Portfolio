@@ -21,34 +21,48 @@
   transition: transform 2s;
   transform: translateX(-50%) translateY(-50%);
   z-index: 123;
-  h2 {
-    color: rgb(255, 255, 255);
-  }
+
   .btn {
     top: 65%;
-    color: rgb(255, 255, 255);
   }
-
   .title {
     font-size: 36px;
-    color: #ffffff;
+  }
+  h2,
+  .btn,
+  .title {
+    color: rgb(255, 255, 255);
   }
 }
 
 .moon-button {
   position: absolute;
-  top: 90%;
-  left: 90%;
+  top: 92%;
+  left: 95%;
   .moon-container {
-    transition: transform 0.5s, height 0.5s, width 0.5s, background 0.2s;
+    z-index: 2;
+    transition: transform 0.5s, height 0.5s, width 0.5s,
+      background 0.2s ease-out;
     background: url("https://pbash-js.github.io/Portfolio/img/rocket.png");
     background-position-x: center;
     background-position-y: center;
     background-size: cover;
     height: 60px;
     width: 60px;
+    &:not(:focus) {
+      background: url("https://pbash-js.github.io/Portfolio/img/rocket.png");
+      background-position-x: center;
+      background-position-y: center;
+      background-size: cover;
+    }
+    &:hover,
+    &:focus-within,
+    &:focus {
+      background: none;
+      &:nth-child(n) {
+        opacity: 1;
+      }
 
-    &:hover {
       .btn-popup {
         height: 100px;
         width: 70px;
@@ -67,6 +81,9 @@
   left: 50%;
   top: 80%;
   transform: translate(0px, 0px) !important;
+  .moon-container {
+    background: none;
+  }
 }
 
 .btn-popup {
@@ -76,18 +93,21 @@
   height: 0vh;
   width: 0vh;
   transition: all 0.5s;
-  background-color: white;
+  border-radius: 5px;
   overflow: hidden;
-  padding-top: 5px;
 
   .fa-envelope {
     font-size: 50px;
+    font-weight: lighter;
   }
-
+  .btn-popup-interaction {
+    padding-left: 10px;
+    width: 100%;
+  }
   &-expanded {
     transform: translateY(-30%);
     transition: all 0.5s;
-    padding: 20px;
+    padding: 20px 30px;
     height: 90vh !important;
     width: 95vw !important;
     .btn-popup-interaction {
@@ -95,6 +115,8 @@
       display: flex;
       justify-content: space-between;
       .fas {
+        position: relative !important;
+        opacity: 1 !important;
         display: inline-block !important;
       }
     }
@@ -102,7 +124,8 @@
 
   & > &-interaction {
     .fas {
-      display: none;
+      position: absolute;
+      opacity: 0;
     }
   }
 }

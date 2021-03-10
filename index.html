@@ -40,7 +40,7 @@
       <div class="screen" id="scene1" >
 
         <div class="moon-move parallax float" data-speed="5">
-          <div class="moon-container">
+          <div class="moon-container" tabindex="1">
             <h2>Hey there!</h2>
             <div class="title">I am Purnanshu</div>
             <h2>I'm a web developer</h2>
@@ -72,12 +72,11 @@
         <section id="about-section">
           <h1>About Me</h1>
           <div class="section-text">
-            I am a web dev based in Bhilai Chattisgarh.
             <br />
             <br />
             <br />
             <br />
-            Click one of these 👇 to know more!
+            Click one of those 👇 to find out!
           </div>
 
           <div class="popup-container-about">
@@ -94,7 +93,7 @@
                 <img src='https://pbash-js.github.io/Portfolio/img/meport.jpeg' alt='some guy...'></img>
                 <div class='item'>
                   <div class='heading-2'>
-                    Loves to code, read, play the guitar, and watch dog videos on youtube.
+                    Loves to code, read books, play the guitar, and watch dog videos on youtube.
                   </div>
                 </div>
               "
@@ -344,6 +343,7 @@
           </div>
           <div class="popup-container">
             <div class="popup-expanded">
+              <i class="fas fa-link" onclick="openLink(event)"></i>
               <i class="fas fa-info"></i>
               <div class="popup-info"></div>
             </div>
@@ -355,6 +355,7 @@
                 details="
                 A social media website built on the MERN stack, complete with profiles, posts, likes and comments. Deployed using Heroku.
               "
+              link='https://young-falls-66868.herokuapp.com'
               ></div>
               <div
                 "
@@ -363,6 +364,7 @@
                 details="
                 A 25 + 5 adjustable Pomodoro Timer built with React and styled with Bootstrap
               "
+              link='https://github.com/Pbash-js/PomodoroTimer'
               ></div>
               <div
                 "
@@ -371,6 +373,7 @@
                 details="
                 A Javascript Calculator built with HTML, Pure Css and Javascript
               "
+              link='https://github.com/Pbash-js/React-Calc'
               ></div>
               <div
                 "
@@ -379,6 +382,7 @@
                 details="
                 A Random Quote Generator that makes request to FreeCodeCamp's server to get an array of quotes, which can be cycled through using the UI
               "
+              link='https://github.com/Pbash-js/RandomQuoteGenerator'
               ></div>
             </div>
           </div>
@@ -386,9 +390,11 @@
         <section id="contact-section">
           <h1>Contact</h1>
           <div class="section-text">
-            So, what do you think? <br />
-            Wanna work together?
+            Let's get to work! <br />
+            Drop a 💬 below
             <br />
+          </div>
+
             <div class="social-container">
               <a href="https://www.facebook.com/purnanshuborkar" target="_blank"
                 ><i class="fab fa-facebook-f"></i
@@ -404,8 +410,13 @@
               >
                 <i class="fab fa-linkedin"></i>
               </a>
+              <a
+                href="https://github.com/Pbash-js"
+                target="_blank"
+              >
+                <i class="fab fa-github"></i>
+              </a>
             </div>
-          </div>
         </section>
       </div>
     </div>

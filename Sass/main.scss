@@ -15,7 +15,7 @@ $imgwidth: 4;
   box-sizing: border-box;
   font-size: 100%;
   scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;
   &:focus {
     outline: 0px;
   }
@@ -49,16 +49,16 @@ $imgwidth: 4;
   }
 }
 
-::-webkit-scrollbar {
+*::-webkit-scrollbar {
   width: 0px;
 
   &-track {
-    background-color: rgba(255, 255, 255, 0.103);
+    background-color: rgba(255, 255, 255, 0);
     border-radius: 5px;
   }
 
   &-thumb {
-    background-color: rgb(212, 53, 53);
+    background-color: rgba(155, 155, 155, 0.534);
     border-radius: 5px;
     height: 20px;
   }

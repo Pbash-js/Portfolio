@@ -6,7 +6,6 @@ document.onreadystatechange = () => {
     setTimeout(() => {
       loading.remove();
     }, 500);
-    return console.log("complete");
   }
 };
 
@@ -25,11 +24,17 @@ var executed = true;
 
 window.addEventListener("scroll", (e) => {
   //project interval
+  if (document.activeElement.classList[0] == "moon-container") {
+    document.activeElement.blur();
+  }
   if (timeoutId) clearInterval(timeoutId);
 
   if (window.pageYOffset > 150) {
     document.querySelector(".moon-move").classList.add("moon-button");
-
+    var parallax = document.querySelector(".parallax");
+    if (parallax) {
+      parallax.classList.remove("parallax");
+    }
     var distfrombottom =
       document.documentElement.getBoundingClientRect().height -
       window.innerHeight +
@@ -64,6 +69,8 @@ window.addEventListener("scroll", (e) => {
     ).style.transform = `translateX(-50%) translateY(-50%)`;
     executed = true;
     document.querySelector(".moon-move").classList.remove("moon-button");
+    document.querySelector(".moon-move").classList.add("parallax");
+
     document.querySelector("nav").style.opacity = 0;
     document.querySelector(".section-container").style.top = "100vh";
   }
@@ -96,12 +103,17 @@ const lavacolor = (element) => {
     lava.style.backgroundColor = "#836fab";
   } else if (element.id == "skills") {
     lava.style.backgroundColor = "#3b4b89";
-    animateStars();
   } else if (element.id == "projects") {
-    idleProjects();
     lava.style.backgroundColor = "#62cddc";
   } else if (element.id == "contact") {
     lava.style.backgroundColor = "#ff6252";
+    if (
+      document.documentElement.getBoundingClientRect().height -
+        window.innerHeight +
+        document.documentElement.getBoundingClientRect().top <
+      1
+    )
+      document.querySelector(".moon-container").focus();
   }
 };
 
@@ -119,7 +131,6 @@ const navigateTo = (e) => {
 };
 
 const starmove = (skill, pro) => {
-  if (window.innerWidth < 1000) pro = parseFloat(pro / 2) + "";
   skill.style.width = `${0}px`;
   setTimeout(() => {
     if (pro) {
@@ -137,14 +148,12 @@ const popupHandlerAbout = (e) => {
   if (e.target.classList[0] == "fas") {
     el.style.height = "0px";
     el.style.width = "0px";
-    // el.style.top = `${e.clientY}px`;
-    // el.style.right = `${window.innerWidth - e.clientX}px`;
     el.innerHTML = null;
     el.style.padding = "0px";
     return 0;
   }
 
-  if (el.style.top == `55%` || el.style.top == `41%`) {
+  if (el.style.top == `56%` || el.style.top == `41%`) {
     el.style.height = null;
     el.style.width = null;
   }
@@ -164,9 +173,9 @@ const popupHandlerAbout = (e) => {
     setTimeout(() => {
       el.style.padding = "20px";
 
-      el.style.top = `55%`;
+      el.style.top = `56%`;
       el.style.right = `5%`;
-      el.style.height = `60%`;
+      el.style.height = `83%`;
       el.style.width = `50%`;
     }, 500);
   }
@@ -182,12 +191,16 @@ document
 //proficiency
 document.querySelectorAll(".lebel").forEach((skill) => {
   var pro = skill.getAttribute("proficiency");
+  if (window.innerWidth < 1000) pro = parseFloat(pro / 2) + "";
+
   if (pro) {
     skill.style.width = `${pro * 40}px`;
   } else if (!pro) {
     skill.style.width = `${40}px`;
   }
-  skill.addEventListener("mouseenter", () => starmove(skill, pro));
+  skill.parentElement.addEventListener("mouseenter", () =>
+    starmove(skill, pro)
+  );
 });
 
 const animateStars = () => {
@@ -200,31 +213,29 @@ const animateStars = () => {
 const expandContact = (bool) => {
   var el = document.querySelector(".btn-popup");
   var moon = document.querySelector(".moon-container");
-  var moon = document.querySelector(".moon-container");
-
   var chatbutton = document.querySelector(".chat-button");
-
   if (bool) {
-    // document.querySelector(".chat-button").style.top = "50%";
     el.classList.add("btn-popup-expanded");
     moon.style.height = "90vh";
     moon.style.background = "rgba(0,0,0,0)";
-    var check = false;
+    el.style.backgroundColor = "black";
+    el.style.color = "white";
     if (!chatbutton) {
       document.querySelector(".moon-move").classList.add("chat-button");
       setTimeout(() => {
-        document.querySelector(".parallax").classList.remove("parallax");
+        document.querySelector(".moon-move").classList.remove("parallax");
       }, 500);
       check = true;
     }
   } else {
     el.classList.remove("btn-popup-expanded");
+    moon.style.background = null;
+
     moon.style.height = null;
+    el.style.backgroundColor = null;
+    el.style.color = null;
 
     setTimeout(() => {
-      moon.style.height = null;
-      moon.style.background = null;
-      document.querySelector(".moon-button").classList.add("parallax");
       if (
         document.documentElement.getBoundingClientRect().height -
           window.innerHeight +
@@ -232,9 +243,16 @@ const expandContact = (bool) => {
         100
       )
         document.querySelector(".moon-move").classList.remove("chat-button");
-    }, 510);
+    }, 500);
   }
 };
+
+//project section
+
+const openLink = (e) => {
+  window.open(e.target.getAttribute("link"), "_blank");
+};
+
 const popupHandler = (e) => {
   e.target.style.backgroundColor = "#3489be";
   var el = document.querySelector(".popup-expanded");
@@ -257,7 +275,7 @@ const popupHandler = (e) => {
     setTimeout(() => {
       el.style.top = `55%`;
       el.style.left = `50%`;
-      el.style.height = `300px`;
+      el.style.height = `40%`;
       el.style.width = `80%`;
     }, 500);
   } else {
@@ -268,7 +286,7 @@ const popupHandler = (e) => {
       el.style.width = `500px`;
     }, 500);
   }
-
+  el.children[0].setAttribute("link", e.target.getAttribute("link"));
   setTimeout(() => {
     el.style.backgroundImage = `url(${e.target.getAttribute("url")})`;
     elInfo.innerHTML = e.target.getAttribute("details");
@@ -283,18 +301,4 @@ document
 
 var timeoutId;
 
-const idleProjects = () => {
-  var i = 0;
-  document
-    .getElementById("projects-section")
-    .addEventListener("mousemove", (e) => {
-      if (e && timeoutId) {
-        clearInterval(timeoutId);
-      }
-      timeoutId = setInterval(() => {
-        document.querySelectorAll(".popup")[i].click();
-        i += 1;
-        if (i == 4) i = 0;
-      }, 5000);
-    });
-};
+document.querySelectorAll(".popup")[0].click();
