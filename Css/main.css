@@ -59,7 +59,7 @@ section h1 { font-size: 50px; }
 
 .screen { background: url("https://pbash-js.github.io/Portfolio/img/portfolio3.png"); scroll-snap-align: end; overflow: hidden; height: 100vh; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; width: 100%; -webkit-box-align: center; -ms-flex-align: center; align-items: center; background-attachment: fixed; background-size: cover; z-index: 2; }
 
-.section-container { z-index: 3; top: 100vh; width: 100%; -webkit-transition: top ease-in-out 0.5s; transition: top ease-in-out 0.5s; }
+.section-container { z-index: 3; width: 100%; -webkit-transition: top ease-in-out 0.5s; transition: top ease-in-out 0.5s; }
 
 #about-section { position: relative; background-attachment: fixed; background-position-x: center; background-position-y: 35%; background-size: cover; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
 
@@ -197,25 +197,25 @@ form textarea { font-family: "Proza Libre", sans-serif; justify-self: flex-end; 
 
 *::-webkit-scrollbar-thumb { background-color: rgba(155, 155, 155, 0.534); border-radius: 5px; height: 20px; }
 
-@media (max-width: 1000px) { * { -ms-scroll-snap-type: none; scroll-snap-type: none; }
+@media (max-width: 1000px) { * { -ms-scroll-snap-type: unset; scroll-snap-type: unset; }
   .loading-screen { font-size: 100px; }
   .loading-screen h2 { font-size: 30px; }
-  .nav-container nav { position: fixed; top: calc(100vh - 50px); font-size: 13px; }
+  .nav-container nav { position: fixed; top: calc(100vh - 50px); font-size: 1rem; }
   .nav-container nav .navlink { padding: 0 10px; }
   .moon-container { height: 200px; width: 200px; }
-  .moon-container h2 { font-size: 10px !important; }
-  .moon-container .title { font-size: 20px; }
-  .moon-container .btn { top: 70%; font-size: 0.6rem; background-color: rgba(0, 0, 0, 0); }
-  .moon-button { top: 80%; left: 90%; }
+  .moon-container h2 { font-size: 0.8rem !important; }
+  .moon-container .title { font-size: 1.2rem; margin: 0.5rem 0; }
+  .moon-container .btn { top: 70%; font-size: 0.8rem; background-color: rgba(0, 0, 0, 0); }
+  .moon-button { top: calc(100vh - 100px); left: 90%; }
   .moon-button .moon-container { height: 30px; width: 30px; }
   .moon-button .moon-container .btn-popup { border-radius: 20px; }
-  .moon-button .moon-container .btn-popup i { padding-left: 13%; font-size: 30px; }
+  .moon-button .moon-container .btn-popup i { padding-left: 13%; font-size: 2rem; }
   .moon-button .moon-container .btn-popup i .fas { display: none !important; }
   .moon-button .moon-container .btn-popup-expanded { padding: 20px; height: 120vh !important; -webkit-transform: translateY(3%); transform: translateY(3%); }
   .moon-button .moon-container .btn-popup-expanded i { padding-left: 0%; }
   .moon-button .moon-container .btn-popup-expanded .fas { font-size: 15px; display: inline-block !important; }
   .chat-button { left: 50%; top: 50%; -webkit-transform: translate(0px, 0px) !important; transform: translate(0px, 0px) !important; }
-  section { font-size: 1rem; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; padding: 50px 20px 50px; overflow: hidden; }
+  section { font-size: 1rem; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; padding: 50px 20px 50px; overflow: hidden; background-position-y: unset !important; height: calc(100vh - 50px); }
   section h1 { font-size: 2rem; }
   section .section-text { display: -webkit-box; display: -ms-flexbox; display: flex; }
   #about-section .popup-container-about .popup-line-about { -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; }

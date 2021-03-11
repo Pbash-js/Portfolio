@@ -25,9 +25,10 @@ var executed = true;
 window.addEventListener("scroll", (e) => {
   //project interval
   if (document.activeElement.classList[0] == "moon-container") {
-    document.activeElement.blur();
+    document.documentElement.focus();
   }
-  if (timeoutId) clearInterval(timeoutId);
+
+  console.log(document.activeElement);
 
   if (window.pageYOffset > 150) {
     document.querySelector(".moon-move").classList.add("moon-button");
@@ -46,11 +47,6 @@ window.addEventListener("scroll", (e) => {
       document.querySelector(".moon-move").classList.remove("chat-button");
     }
 
-    if (executed) {
-      lavamove(document.getElementById("about"));
-      executed = false;
-    }
-
     document.querySelector("nav").style.opacity = 1;
 
     document.querySelectorAll("section").forEach((el) => {
@@ -58,7 +54,7 @@ window.addEventListener("scroll", (e) => {
       var bottom = el.getClientRects()[0].top + el.getClientRects()[0].height;
       var vh = window.innerHeight;
 
-      if (top < vh / 9 && bottom > (8 * vh) / 9) {
+      if (top < vh / 20 && bottom > (19 * vh) / 20) {
         var elem = document.getElementById(el.id.split("-")[0]);
         lavamove(elem);
       }
@@ -67,12 +63,9 @@ window.addEventListener("scroll", (e) => {
     document.querySelector(
       ".moon-container"
     ).style.transform = `translateX(-50%) translateY(-50%)`;
-    executed = true;
     document.querySelector(".moon-move").classList.remove("moon-button");
     document.querySelector(".moon-move").classList.add("parallax");
-
     document.querySelector("nav").style.opacity = 0;
-    document.querySelector(".section-container").style.top = "100vh";
   }
 });
 
@@ -111,7 +104,7 @@ const lavacolor = (element) => {
       document.documentElement.getBoundingClientRect().height -
         window.innerHeight +
         document.documentElement.getBoundingClientRect().top <
-      1
+      100
     )
       document.querySelector(".moon-container").focus();
   }
@@ -122,11 +115,10 @@ const navigateTo = (e) => {
     document.getElementById(`contact-section`).scrollIntoView({ block: "end" });
   } else {
     lavamove(document.getElementById(e.target.id));
-
     var element = document.getElementById(
       `${e.target.innerHTML.toLowerCase().trim()}-section`
     );
-    element.scrollIntoView({ block: "end" });
+    element.scrollIntoView({ block: "center" });
   }
 };
 
@@ -244,6 +236,14 @@ const expandContact = (bool) => {
       )
         document.querySelector(".moon-move").classList.remove("chat-button");
     }, 500);
+
+    if (
+      document.documentElement.getBoundingClientRect().height -
+        window.innerHeight +
+        document.documentElement.getBoundingClientRect().top >
+      100
+    )
+      document.querySelector(".moon-move").classList.remove("chat-button");
   }
 };
 
@@ -298,7 +298,5 @@ const popupHandler = (e) => {
 document
   .querySelectorAll(".popup")
   .forEach((popup) => popup.addEventListener("click", popupHandler));
-
-var timeoutId;
 
 document.querySelectorAll(".popup")[0].click();
